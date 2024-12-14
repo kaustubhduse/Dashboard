@@ -1,7 +1,6 @@
-module.exports = {
+export default {
   content: [
-    './src/**/*.{js,jsx,ts,tsx}', // Include all React component files
-    './public/index.html',        // Include the main HTML file if needed
+    './src/**/*.{html,js,jsx,ts,tsx}',
   ],
   theme: {
     extend: {},
