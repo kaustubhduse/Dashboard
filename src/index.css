@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to your main CSS file (e.g., styles.css) */
+
+@keyframes modal-enter {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+    scale: 0.95;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes modal-exit {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+    scale: 0.95;
+  }
+}
+
+/* Tailwind-based classes for animation */
+.animate-modal {
+  animation: modal-enter 0.3s ease-out forwards;
+}
+
+.animate-exit {
+  animation: modal-exit 0.3s ease-in forwards;
+}
+
+
+/* UserDetailsModal.css */
+
+.blink-symbol {
+  display: inline-block;
+  font-size: 2rem;
+  color: rgb(95, 252, 95); /* You can change the color to match your design */
+  animation: blink 1s infinite;
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

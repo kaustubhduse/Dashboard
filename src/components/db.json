@@ -1,0 +1,82 @@
+{
+  "totalUsers": 50,
+  "activeUsers": 25,
+  "deletedUsers": 5,
+  "userRegistrationTrend": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "data": [12, 2, 15, 7, 8, 6]
+  },
+  "activeVsInactiveUsers": {
+    "activeUsers": 25,
+    "inactiveUsers": 25
+  },
+  "usersByRegion": [
+    { "region": "North America", "users": 15 },
+    { "region": "Europe", "users": 10 },
+    { "region": "Asia", "users": 8 },
+    { "region": "Africa", "users": 4 },
+    { "region": "South America", "users": 13 }
+  ],
+  "filters": {
+    "regions": [
+      "North America",
+      "Europe",
+      "Asia",
+      "Africa",
+      "South America"
+    ]
+  },
+  "users": [
+    { "id": 1, "name": "Aarav Sharma", "status": "inactive", "region": "North", "email": "aarav.sharma@example.com", "createdAt": "2024-11-15" },
+    { "id": 2, "name": "Isha Patel", "status": "inactive", "region": "West", "email": "isha.patel@example.com", "createdAt": "2024-11-20" },
+    { "id": 3, "name": "Rajiv Singh", "status": "active", "region": "North", "email": "rajiv.singh@example.com", "createdAt": "2024-11-25" },
+    { "id": 4, "name": "Sneha Reddy", "status": "inactive", "region": "South", "email": "sneha.reddy@example.com", "createdAt": "2024-11-28" },
+    { "id": 5, "name": "Aditya Gupta", "status": "active", "region": "North", "email": "aditya.gupta@example.com", "createdAt": "2024-11-10" },
+    { "id": 6, "name": "Nisha Mehta", "status": "inactive", "region": "West", "email": "nisha.mehta@example.com", "createdAt": "2024-11-12" },
+    { "id": 7, "name": "Vikram Malhotra", "status": "active", "region": "North", "email": "vikram.malhotra@example.com", "createdAt": "2024-11-16" },
+    { "id": 8, "name": "Anjali Nair", "status": "inactive", "region": "South", "email": "anjali.nair@example.com", "createdAt": "2024-11-18" },
+    { "id": 9, "name": "Karan Kapoor", "status": "active", "region": "North", "email": "karan.kapoor@example.com", "createdAt": "2024-11-14" },
+    { "id": 10, "name": "Priya Rao", "status": "inactive", "region": "South", "email": "priya.rao@example.com", "createdAt": "2024-11-22" },
+    { "id": 11, "name": "Rohit Shetty", "status": "active", "region": "West", "email": "rohit.shetty@example.com", "createdAt": "2024-11-13" },
+    { "id": 12, "name": "Meera Das", "status": "inactive", "region": "East", "email": "meera.das@example.com", "createdAt": "2024-11-14" },
+    { "id": 13, "name": "Aryan Chawla", "status": "active", "region": "North", "email": "aryan.chawla@example.com", "createdAt": "2024-11-30" },
+    { "id": 14, "name": "Pooja Iyer", "status": "inactive", "region": "South", "email": "pooja.iyer@example.com", "createdAt": "2024-12-02" },
+    { "id": 15, "name": "Amit Joshi", "status": "active", "region": "West", "email": "amit.joshi@example.com", "createdAt": "2024-12-05" },
+    { "id": 16, "name": "Divya Thakur", "status": "inactive", "region": "North", "email": "divya.thakur@example.com", "createdAt": "2024-12-01" },
+    { "id": 17, "name": "Rajesh Mishra", "status": "active", "region": "East", "email": "rajesh.mishra@example.com", "createdAt": "2024-12-07" },
+    { "id": 18, "name": "Simran Arora", "status": "inactive", "region": "North", "email": "simran.arora@example.com", "createdAt": "2024-12-08" },
+    { "id": 19, "name": "Manish Verma", "status": "active", "region": "West", "email": "manish.verma@example.com", "createdAt": "2024-12-01" },
+    { "id": 20, "name": "Kavya Bhat", "status": "inactive", "region": "South", "email": "kavya.bhat@example.com", "createdAt": "2024-12-10" },
+    { "id": 21, "name": "Siddharth Jain", "status": "active", "region": "North", "email": "siddharth.jain@example.com", "createdAt": "2024-12-06" },
+    { "id": 22, "name": "Ritu Agarwal", "status": "inactive", "region": "East", "email": "ritu.agarwal@example.com", "createdAt": "2024-12-02" },
+    { "id": 23, "name": "Arjun Kumar", "status": "active", "region": "South", "email": "arjun.kumar@example.com", "createdAt": "2024-12-04" },
+    { "id": 24, "name": "Neha Desai", "status": "inactive", "region": "West", "email": "neha.desai@example.com", "createdAt": "2024-12-01" },
+    { "id": 25, "name": "Suresh Yadav", "status": "active", "region": "North", "email": "suresh.yadav@example.com", "createdAt": "2024-12-09" },
+    { "id": 26, "name": "Ishaan Malik", "status": "active", "region": "West", "email": "ishaan.malik@example.com", "createdAt": "2024-12-01" },
+    { "id": 27, "name": "Riya Kapoor", "status": "inactive", "region": "South", "email": "riya.kapoor@example.com", "createdAt": "2024-12-03" },
+    { "id": 28, "name": "Arun Sen", "status": "active", "region": "East", "email": "arun.sen@example.com", "createdAt": "2024-12-01" },
+    { "id": 29, "name": "Sneha Tiwari", "status": "inactive", "region": "North", "email": "sneha.tiwari@example.com", "createdAt": "2024-12-06" },
+    { "id": 30, "name": "Karthik Nair", "status": "active", "region": "South", "email": "karthik.nair@example.com", "createdAt": "2024-12-04" },
+    { "id": 31, "name": "Vikram Goel", "status": "inactive", "region": "West", "email": "vikram.goel@example.com", "createdAt": "2024-12-08" },
+    { "id": 32, "name": "Pallavi Bose", "status": "active", "region": "East", "email": "pallavi.bose@example.com", "createdAt": "2024-12-09" },
+    { "id": 33, "name": "Sahil Gupta", "status": "inactive", "region": "North", "email": "sahil.gupta@example.com", "createdAt": "2024-12-03" },
+    { "id": 34, "name": "Ananya Reddy", "status": "active", "region": "South", "email": "ananya.reddy@example.com", "createdAt": "2024-12-02" },
+    { "id": 35, "name": "Vivek Mehta", "status": "inactive", "region": "West", "email": "vivek.mehta@example.com", "createdAt": "2024-12-05" },
+    { "id": 36, "name": "Priyanka Jain", "status": "active", "region": "East", "email": "priyanka.jain@example.com", "createdAt": "2024-12-07" },
+    { "id": 37, "name": "Rahul Thakur", "status": "inactive", "region": "North", "email": "rahul.thakur@example.com", "createdAt": "2024-12-01" },
+    { "id": 38, "name": "Naveen Bhat", "status": "active", "region": "South", "email": "naveen.bhat@example.com", "createdAt": "2024-12-08" },
+    { "id": 39, "name": "Sonal Gupta", "status": "inactive", "region": "West", "email": "sonal.gupta@example.com", "createdAt": "2024-12-09" },
+    { "id": 40, "name": "Akhil Mishra", "status": "active", "region": "East", "email": "akhil.mishra@example.com", "createdAt": "2024-12-10" },
+    { "id": 41, "name": "Shreya Arora", "status": "inactive", "region": "North", "email": "shreya.arora@example.com", "createdAt": "2024-12-01" },
+    { "id": 42, "name": "Rohit Verma", "status": "active", "region": "South", "email": "rohit.verma@example.com", "createdAt": "2024-12-02" },
+    { "id": 43, "name": "Lakshmi Iyer", "status": "inactive", "region": "West", "email": "lakshmi.iyer@example.com", "createdAt": "2024-12-04" },
+    { "id": 44, "name": "Ravi Shukla", "status": "active", "region": "East", "email": "ravi.shukla@example.com", "createdAt": "2024-12-03" },
+    { "id": 45, "name": "Sandeep Yadav", "status": "inactive", "region": "North", "email": "sandeep.yadav@example.com", "createdAt": "2024-12-06" },
+    { "id": 46, "name": "Kiran Kumari", "status": "active", "region": "South", "email": "kiran.kumari@example.com", "createdAt": "2024-12-01" },
+    { "id": 47, "name": "Vishal Ghosh", "status": "inactive", "region": "West", "email": "vishal.ghosh@example.com", "createdAt": "2024-12-05" },
+    { "id": 48, "name": "Bhavna Kaur", "status": "active", "region": "East", "email": "bhavna.kaur@example.com", "createdAt": "2024-12-07" },
+    { "id": 49, "name": "Umesh Patil", "status": "inactive", "region": "South", "email": "umesh.patil@example.com", "createdAt": "2024-12-08" },
+    { "id": 50, "name": "Gaurav Prakash", "status": "active", "region": "North", "email": "gaurav.prakash@example.com", "createdAt": "2024-12-10" }
+  ]
+
+}
