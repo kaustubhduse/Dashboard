@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUsersSuccess, deleteUserThunk } from '../redux/slices/userSlice';
+import { fetchUsersSuccess, deleteUserThunk, } from '../redux/slices/userSlice';
 import { RootState, AppDispatch } from '../redux/store';
 import { incrementDeletedUsers, decrementTotalUsers, decrementActiveUsers } from '../redux/slices/analyticsSlice';
 import Pagination from './Pagination';

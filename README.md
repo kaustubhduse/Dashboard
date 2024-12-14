@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# React Authentication App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based authentication application with a mock API for user login and signup. It uses `react-router-dom` for routing and includes features such as protected routes and a simulated backend for authentication.
+In Analytics, it shows totalUsers which are remaining after deleted and if we filter it, it shows totalUsers as the filtered Users.
+I have used 50 users in db.json as mock API out of which 
+25 are active
+25 are inactive 
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Login and Signup functionality with a mock API.
+- Protected routes to secure access to certain pages (e.g., Dashboard, Analytics).
+- Responsive design with a modern UI.
+- State management for user authentication.
+- Mock API to simulate real-world backend authentication.
+- 
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend**: React, TypeScript
+- **Routing**: React Router
+- **State Management**: Context API
+- **Styling**: Tailwind CSS
+- **Mock API**: JavaScript simulation of backend services
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation and Setup
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Clone the Repository**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+   git clone https://github.com/your-username/your-repository-name.git
+   cd your-repository-name
