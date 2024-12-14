@@ -36,6 +36,7 @@ const App: React.FC = () => {
               </ProtectedRoute>
             }
           />
+          
         </Routes>
       </Router>
     </AuthProvider>

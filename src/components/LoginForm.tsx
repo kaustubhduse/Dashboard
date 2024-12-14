@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthProvider';  
-import { mockApiLogin } from './MockApi'; 
+import { mockApiLogin } from './MockApi';
+import { Link } from 'react-router-dom'; 
 
 const LoginForm: React.FC = () => {
   const { login } = useAuth();  
@@ -87,9 +88,9 @@ const LoginForm: React.FC = () => {
         <div className="text-center mt-4">
           <p className="text-sm text-gray-600">
             Don’t have an account?{' '}
-            <a href="/signup" className="text-teal-500 hover:underline">
+            <Link to="/signup" className="text-teal-500 hover:underline">
               Sign up
-            </a>
+            </Link>
           </p>
         </div>
       </div>
