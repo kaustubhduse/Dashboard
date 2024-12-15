@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    // Close menu when a link is clicked
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 text-white py-5 shadow-lg">
       <div className="container mx-auto flex justify-between items-center px-8">
@@ -27,18 +32,21 @@ const Navbar: React.FC = () => {
           <Link
             to="/"
             className="block md:inline-block text-white text-xl py-3 px-8 hover:text-yellow-400 transition-all duration-300 ease-in-out transform hover:text-2xl"
+            onClick={handleLinkClick} // Close menu
           >
             Home
           </Link>
           <Link
             to="/dashboard"
             className="block md:inline-block text-white text-xl py-3 px-8 hover:text-yellow-400 transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-2xl"
+            onClick={handleLinkClick} // Close menu
           >
             Dashboard
           </Link>
           <Link
             to="/analytics"
             className="block md:inline-block text-white text-xl py-3 px-8 hover:text-yellow-400 transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-2xl"
+            onClick={handleLinkClick} // Close menu
           >
             Analytics
           </Link>
