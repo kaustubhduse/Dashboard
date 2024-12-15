@@ -24,6 +24,7 @@ const BarChart: React.FC<BarChartProps> = ({ data }) => {
 
   const chartOptions = {
     responsive: true,
+    maintainAspectRatio: false, // Allow chart to resize dynamically
     plugins: {
       title: {
         display: true,
@@ -68,8 +69,11 @@ const BarChart: React.FC<BarChartProps> = ({ data }) => {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg mt-8 w-full max-w-6xl mx-auto">
-      <h3 className="text-3xl text-center font-semibold mb-5 py-5 ">Users by Region</h3>
-      <Bar data={chartData} options={chartOptions} />
+      <h3 className="text-3xl text-center font-semibold mb-5 py-5">Users by Region</h3>
+      <div className="relative h-96 md:h-80 lg:h-96 w-full">
+        {/* Chart container with responsive height */}
+        <Bar data={chartData} options={chartOptions} />
+      </div>
     </div>
   );
 };

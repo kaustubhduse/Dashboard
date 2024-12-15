@@ -22,6 +22,7 @@ I have used 50 users in db.json as mock API out of which
 - **State Management**: Context API
 - **Styling**: Tailwind CSS
 - **Mock API**: JavaScript simulation of backend services
+- **Charts and Metrics** 
 
 ---
 
