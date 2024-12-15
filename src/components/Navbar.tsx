@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
         <div
           className={`${
             isMenuOpen ? 'block' : 'hidden'
-          } md:flex md:space-x-8 md:items-center md:text-lg md:font-medium absolute md:static top-16 left-0 w-full bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 md:bg-transparent md:w-auto transition-all duration-300 ease-in-out`}
+          } md:flex md:space-x-8 md:items-center md:text-lg md:font-medium absolute md:static top-16 left-0 w-full bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 md:bg-transparent md:w-auto transition-all duration-300 ease-in-out z-50`}
         >
           <Link
             to="/"
