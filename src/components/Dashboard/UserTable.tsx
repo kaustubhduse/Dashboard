@@ -1,31 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchUsersSuccess,
-  deleteUserThunk,
-} from "../redux/slices/userSlice";
-import { RootState, AppDispatch } from "../redux/store";
-import {
-  incrementDeletedUsers,
-  decrementTotalUsers,
-  decrementActiveUsers,
-} from "../redux/slices/analyticsSlice";
-import Pagination from "./Pagination";
-import UserDetailsModal from "./UserDetailsModal";
-import SearchFilter from "./SearchFilter";
-import mockData from "../db.json";
-import { FaEye, FaTrash } from "react-icons/fa";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchUsersSuccess, deleteUserThunk, } from '../redux/slices/userSlice';
+import { RootState, AppDispatch } from '../redux/store';
+import { incrementDeletedUsers, decrementTotalUsers, decrementActiveUsers } from '../redux/slices/analyticsSlice';
+import Pagination from './Pagination';
+import UserDetailsModal from './UserDetailsModal';
+import SearchFilter from './SearchFilter';
+import mockData from '../db.json';
+import { FaEye, FaTrash } from 'react-icons/fa';
 
 const UserTable: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
   const { filteredUsers } = useSelector((state: RootState) => state.users);
-  const deletedUsers = useSelector(
-    (state: RootState) => state.analytics.deletedUsers
-  );
+  const deletedUsers = useSelector((state: RootState) => state.analytics.deletedUsers);
 
-  const [isUserFound, setIsUserFound] = useState(true);
+  const [isUserFound, setIsUserFound] = useState(true); 
+  
   const findUserHandler = (found: boolean) => {
-    setIsUserFound(found);
+    setIsUserFound(found); 
   };
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -33,7 +25,6 @@ const UserTable: React.FC = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedUser, setSelectedUser] = useState<any>(null);
-  const [deletingUserId, setDeletingUserId] = useState<number | null>(null);
 
   const indexOfLastUser = currentPage * usersPerPage;
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
@@ -42,31 +33,27 @@ const UserTable: React.FC = () => {
 
   useEffect(() => {
     if (filteredUsers.length === 0 && mockData.users.length > 0) {
-      const users = mockData.users.map((user) => ({
+      const users = mockData.users.map(user => ({
         ...user,
-        status: user.status as "active" | "inactive",
+        status: user.status as "active" | "inactive"
       }));
       dispatch(fetchUsersSuccess(users));
     }
   }, [dispatch, filteredUsers]);
 
   const handleDelete = (id: number) => {
-    setDeletingUserId(id);
-    setTimeout(() => {
-      dispatch(deleteUserThunk(id));
-      dispatch(incrementDeletedUsers());
-      dispatch(decrementTotalUsers());
+    dispatch(deleteUserThunk(id));
+    dispatch(incrementDeletedUsers());
+    dispatch(decrementTotalUsers());
 
-      const userIndex = mockData.users.findIndex((user) => user.id === id);
-      if (userIndex !== -1) {
-        const isActive = mockData.users[userIndex].status === "active";
-        mockData.users.splice(userIndex, 1);
-        if (isActive) {
-          dispatch(decrementActiveUsers());
-        }
+    const userIndex = mockData.users.findIndex(user => user.id === id);
+    if (userIndex !== -1) {
+      const isActive = mockData.users[userIndex].status === "active";
+      mockData.users.splice(userIndex, 1);
+      if (isActive) {
+        dispatch(decrementActiveUsers());
       }
-      setDeletingUserId(null);
-    }, 500); // Delay for fade-out animation
+    }
   };
 
   const handleOpenModal = (user: any) => {
@@ -83,9 +70,7 @@ const UserTable: React.FC = () => {
 
   return (
     <div className="lg:p-8 bg-gray-100 min-h-screen">
-      <h1 className="text-4xl font-bold mb-6 text-center animate-fadeIn">
-        User Dashboard
-      </h1>
+      <h1 className="text-4xl font-bold mb-6 text-center">User Dashboard</h1>
       <p className="text-lg mb-4">
         <strong>Deleted Users:</strong> {deletedUsers}
       </p>
@@ -102,18 +87,9 @@ const UserTable: React.FC = () => {
           <tbody>
             {isUserFound ? (
               currentUsers.map((user) => (
-                <tr
-                  key={user.id}
-                  className={`border-b hover:bg-gray-400 transition-all duration-300 ${
-                    deletingUserId === user.id ? "opacity-0" : "opacity-100"
-                  }`}
-                >
-                  <td className="p-3 text-sm sm:text-base animate-fadeIn">
-                    {user.name}
-                  </td>
-                  <td className="p-3 text-sm sm:text-base animate-fadeIn">
-                    {user.email}
-                  </td>
+                <tr key={user.id} className="border-b hover:bg-gray-400">
+                  <td className="p-3 text-sm sm:text-base">{user.name}</td>
+                  <td className="p-3 text-sm sm:text-base">{user.email}</td>
                   <td className="p-3">
                     <div className="flex flex-col sm:flex-row sm:space-x-6">
                       <button
@@ -134,10 +110,7 @@ const UserTable: React.FC = () => {
               ))
             ) : (
               <tr>
-                <td
-                  colSpan={3}
-                  className="text-center p-3 text-red-500 animate-fadeIn"
-                >
+                <td colSpan={3} className="text-center p-3 text-red-500">
                   No users found
                 </td>
               </tr>
@@ -156,7 +129,6 @@ const UserTable: React.FC = () => {
         <UserDetailsModal
           user={selectedUser}
           onClose={handleCloseModal}
-          className="animate-slideIn"
         />
       )}
     </div>
