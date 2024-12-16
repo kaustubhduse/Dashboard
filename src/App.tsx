@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 import UserTable from "./components/Dashboard/UserTable";
@@ -18,7 +18,7 @@ const App: React.FC = () => {
           <Route path="/" element={<LoginForm />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/signup" element={<SignupForm />} />
-          
+
           {/* Protected Routes */}
           <Route
             path="/dashboard"
@@ -36,7 +36,9 @@ const App: React.FC = () => {
               </ProtectedRoute>
             }
           />
-          
+
+          {/* Redirect to login for unknown routes */}
+          <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
       </Router>
     </AuthProvider>
